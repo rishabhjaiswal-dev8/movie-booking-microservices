@@ -1,6 +1,5 @@
 package com.aicines.movies;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -9,8 +8,11 @@ import java.util.List;
 @RequestMapping("/movies")
 public class MovieController {
 
-    @Autowired 
-    private MovieRepository repo;
+    private final MovieRepository repo;
+
+    MovieController(MovieRepository repo) {
+        this.repo = repo;
+    }
 
     @PostMapping
     public Movie addMovie(@RequestBody Movie movie){

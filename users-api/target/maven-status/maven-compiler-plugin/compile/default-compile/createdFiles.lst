@@ -1,0 +1,6 @@
+com\aicines\users\UsersController.class
+com\aicines\users\UserRepository.class
+com\aicines\users\client\MovieClient.class
+com\aicines\users\client\MovieClientFallback.class
+com\aicines\users\UsersApplication.class
+com\aicines\users\User.class
